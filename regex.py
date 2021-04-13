@@ -2,13 +2,12 @@ import re
 
 # initializing search patterns
 reg_exp ={"mail": r"[\w._-]+@[\w._-]+\.[\w.]+",
-          "telephone": r"^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$",
-          "domain": r"",
-          "ipv4": r"",
-          "mac": r"",
+          "telephone": r"[78]\d{10}",
+          "domain": r"[0-9a-zA-Z-_]+\.[0-9a-zA-Z-_]+",
+          "ipv4": r"((25[0-5]|2[0-4]\d|1?\d\d?)\.){3}(25[0-5]|2[0-4]\d|1?\d\d?)",
+          "mac": r"([(a-f0-9|A-F0-9)]{2}:){5}[(a-f0-9|A-F0-9)]{2}",
           "ipv6": r"",
-          "uri": r"",
-          "inn": r""}
+          "uri": r""}
 
 #get information from user
 filename_input = input("Enter input file: ")
